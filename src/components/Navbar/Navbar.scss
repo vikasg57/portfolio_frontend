@@ -153,19 +153,26 @@
                        transition: all 0.3s ease-in-out;
 
 
-                       &:hover {
+                    &:hover {
                            color: var(--secondary-color);
-                       }
+                    }
 
                 }
 
             }
         }
 
-        
 
-
+        @media screen and (min-width:900px) {
+            display: none;
+            
+        }
 
     }
+
+     @media screen and (min-width:900px) {
+         display: none;
+
+     }
 
 }
