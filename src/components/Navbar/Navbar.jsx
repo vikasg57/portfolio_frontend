@@ -43,7 +43,7 @@ const Navbar = () => {
               <ul>
                {['home','about','contact','work','skills','contact'].map((item)=>(
           <li key={item}>
-            <a href={`link-${item}`} onClick={()=>setToggle(false)}>{item}</a>
+            <a href={`#${item}`} onClick={()=>setToggle(false)}>{item}</a>
 
           </li>
 
@@ -59,3 +59,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
