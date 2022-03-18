@@ -7,6 +7,11 @@ import {images} from "../../constants"
 
 import {AppWrap} from "../../wrapper"
 
+import {BsFillArrowDownCircleFill,BsEye} from "react-icons/bs"
+
+
+
+
 
 import './Header.scss'
 
@@ -43,18 +48,53 @@ const Header = () => {
         <div style={{marginLeft:20}}>
           <p className='p-text'>Hello,I am</p>
           <h1 className='head-text'>Vikas</h1>
-
+        
 
         </div>
 
        
 
         </div>
-         <div className='tag-cmp app__flex'>
+         <div className='tag-cmp app__flex '>
              <p className='p-text'>Web Devloper</p>
-                <p className='p-text'>Freelancer</p>
+              
 
         </div>
+           
+          <div className='tag-cmp app__flex cv__button '>
+
+             <p className='p-text'>RESUME</p>
+                
+                <div>
+
+                 <a href="https://drive.google.com/file/d/1rJGAuCzJpsZ0qeiKLLGPskx24PS9AcuQ/view?usp=sharing" target="_blank" rel="noreferrer"  >
+                  <motion.div
+                  whileInView={{scale:[0,1]}}
+                   whileHover={{scale:[1,0.9]}}
+               transition={{duration:0.25}}
+               className="app__flex">
+
+                 <BsEye/>
+                 
+               </motion.div>
+                 </a>
+                    <a href="https://drive.google.com/uc?export=download&id=1rJGAuCzJpsZ0qeiKLLGPskx24PS9AcuQ" target="_blank" rel="noreferrer"  >
+                  <motion.div
+                  whileInView={{scale:[0,1]}}
+                   whileHover={{scale:[1,0.9]}}
+               transition={{duration:0.25}}
+               className="app__flex">
+
+                <BsFillArrowDownCircleFill/>
+                 
+               </motion.div>
+                 </a>
+                </div>
+
+               
+
+        </div>
+    
       </div>
     </motion.div>
 
@@ -66,14 +106,14 @@ const Header = () => {
     >
 
 
-      <img src={images.profile} alt="profile_bg" />
+      {/* <img src={images.peofile} alt="profile_bg" /> */}
 
       <motion.img
 
       whileInView={{opacity:[0,1]}}
     transition={{duration:1,ease:'easeInOut'}}
    
-    src={images.circle}
+    src={images.vikas}
     alt="profile_circle"
     className="overlay_circle"
       />
