@@ -4,11 +4,11 @@ import './Work.scss'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import{AiFillEye,AiFillGithub} from "react-icons/ai"
-import{AppWrap} from "../../wrapper"
+import{AppWrap,MotionWrap} from "../../wrapper"
 import{urlFor,client} from "../../client"
  
 
-const Work = () => {
+const Project = () => {
 
   const [activeFilter, setactiveFilter] = useState("All")
   const [animateCard, setanimateCard] = useState({y:0,opacity:1})
@@ -37,7 +37,7 @@ const Work = () => {
 
       setanimateCard([{y:0,opacity:1}])
 
-      if(item=="All"){
+      if(item==="All"){
 
         setFilterWork(Works)
 
@@ -56,7 +56,7 @@ const Work = () => {
   }
   return (
     <>
-     <h2 className='head-text'>My Creative <span> Portfolio</span> Section</h2>
+     <h2 className='head-text'>My Creative <span> Project</span> Section</h2>
 
      <div className='app__work-filter'>
        {["JavaScript","MERN","React JS","All"].map((item,i)=>(
@@ -150,4 +150,9 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work,"work")
+export default AppWrap(
+  MotionWrap(Project,'app__works'),
+
+  "project",
+  "app__whitebg"
+  )
